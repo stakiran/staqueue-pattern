@@ -1,5 +1,5 @@
 # Staqueue Pattern
-[日本語](index.md) | [English](index_EN.md) | [GitHub](https://github.com/stakiran/staqueue-pattern/settings/pages)
+[日本語](index.md) | [English](index_EN.md) | [GitHub](https://github.com/stakiran/staqueue-pattern/)
 
 ## スタッキューパターンについて
 
@@ -52,6 +52,8 @@ High Prio <---   ---> Low Prio
  Stack1  |  Queue1
 ```
 
+## ====
+
 ## スタッキューパターン一覧
 
 ### 割り込み対応パターン
@@ -68,7 +70,7 @@ Stack1 | Queue1
 
 最も基本的なパターンです。割り込みに対応するためにスタックを使いますが、普段はキューを使います。
 
-### カテゴライズパターン
+### カテゴリーパターン
 ```
 Queue-Entrance | Queue1
                  Queue2
@@ -82,20 +84,7 @@ Queue-Entrance | Queue1
     - Queue-Entrance から QueueXX に仕分ける
     - Queue-Entrance は空にすることを心がける
 
-QueueXX の選び方は要設計。たとえば以下の分け方がある:
-
-- (文脈軸)
-    - プロジェクトごと
-    - 人物ごと
-    - 締切目安ごと
-        - たとえば「今日やる」「明日までにやる」「今週中にやる」「それ以降でいい」の 4 本
-        - 日付は毎日更新されるので、毎日更新が必要。手動だと厳しい
-- (主観軸)
-    - 主観的な難易度ごと
-        - たとえば高（頭か神経か両方を酷使する）、中（努力は必要だがまあできる）、低（時間かけたらできるもの）
-    - 好き、嫌い、どっちでもない・どうでもいいの 3 本
-    - やりたい、やりたくないの 2 本
-    - Must、Should、Want の 3 本
+QueueXX のつくりかたは付録1参照。
 
 ### プロジェクトパターン
 ```
@@ -152,3 +141,27 @@ stack-inbox | queue-inbox | stack1  queue1
     - ...
     - ...
     - ...
+
+## ====
+
+## 付録
+
+### 付録1: カテゴリーパターンにおけるカテゴリーのつくりかた
+好きにすれば良いが、よく知られた軸があるため参考にすると良い。
+
+- (文脈軸)
+    - プロジェクトごと
+    - 人物ごと
+    - 締切目安ごと
+        - たとえば「今日やる」「明日までにやる」「今週中にやる」「それ以降でいい」の 4 本
+        - 日付は毎日更新されるので、毎日更新が必要。手動だと厳しい
+- (主観軸)
+    - 主観的な難易度ごと
+        - たとえば高（頭か神経か両方を酷使する）、中（努力は必要だがまあできる）、低（時間かけたらできるもの）
+    - 好き、嫌い、どっちでもない・どうでもいいの 3 本
+    - やりたい、やりたくないの 2 本
+    - Must、Should、Want の 3 本
+
+また私が整理した「タスクの属性一覧」も参考になるだろう:
+
+- [List of "Task Attributes" for Implementing Task Management - DEV Community](https://dev.to/stakiran/list-of-task-attributes-for-implementing-task-management-5e87)
