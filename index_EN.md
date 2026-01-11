@@ -27,7 +27,7 @@ Staqueue comes with several principles. You could also call them assumptions. Yo
     - **Once taken out, an item is deleted (you can re-add it)**
 
 ### Staqueue Patterns
-A整理 of frequently used patterns.
+This is a summary of commonly occurring patterns.
 
 ### Format
 ```
